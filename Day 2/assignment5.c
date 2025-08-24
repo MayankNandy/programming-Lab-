@@ -2,12 +2,13 @@
 int main()
 { int t1,t2;
  float f,c;
- printf("Enter temperature in 캟:");
+ printf("Enter temperature in 째F:");
  scanf("%d",&t1);
  c=(t1-32)*5/9;
- printf("The temperature in 캜 is:%f캜\n",c);
- printf("Enter temperature in 캜:");
+ printf("The temperature in 째C is:%f째C\n",c);
+ printf("Enter temperature in 째C:");
  scanf("%d",&t2);
  f=(9/5*t2)+32;
-  printf("The temperature in 캟 is:%f캟\n",f);
+  printf("The temperature in 째F is:%f째F\n",f);
+return 0;
 }
