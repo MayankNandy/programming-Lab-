@@ -1,0 +1,43 @@
+##include <stdio.h>
+
+int main() {
+    int start, end;
+    int i, j; // i is the number being checked, j is the divisor
+    int is_prime; // Flag variable: 1 means prime, 0 means not prime
+
+    printf("Enter the starting number of the range: ");
+    scanf("%d", &start);
+
+    printf("Enter the ending number of the range: ");
+    scanf("%d", &end);
+
+    printf("Prime numbers between %d and %d are:\n", start, end);
+
+    // Outer loop: Iterate through every number in the given range
+    for (i = start; i <= end; i = i + 1) {
+
+        // 0 and 1 are not prime, so skip them
+        if (i <= 1) {
+            continue; // Skip to the next number in the outer loop
+        }
+
+        is_prime = 1; // Assume the number 'i' is prime at the start of the check
+
+        // Inner loop: Check if 'i' is divisible by any number from 2 up to i-1
+        for (j = 2; j < i; j = j + 1) {
+            if (i % j == 0) {
+                // If the remainder is 0, 'i' is divisible, so it's NOT prime
+                is_prime = 0; 
+                break; // Stop the inner loop, no need to check further divisors
+            }
+        }
+
+        // After the inner loop, check the flag
+        if (is_prime == 1) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+
+    return 0;
+}
