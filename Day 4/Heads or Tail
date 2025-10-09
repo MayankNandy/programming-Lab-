@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h> 
+#include <time.h>   
+
+int main() {
+    // Seed the random generator (required for random numbers)
+    srand(time(NULL));
+
+    // Generate a number 0 or 1
+    int toss = rand() % 2; 
+
+    printf("The coin is tossed...\n");
+
+    if (toss == 0) {
+        printf("It is a HEAD.\n");
+    } else {
+        printf("It is a TAIL.\n");
+    }
+
+    return 0;
+}
