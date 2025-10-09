@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int num_a, num_b, num_c;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &num_a, &num_b, &num_c);
+
+    // First level check: Is 'A' greater than 'B'?
+    if (num_a >= num_b) {
+        // Second level check: Is 'A' also greater than 'C'?
+        if (num_a >= num_c) {
+            printf("%d is the maximum.\n", num_a);
+        } else {
+            // C is larger than A, and A > B, so C is max
+            printf("%d is the maximum.\n", num_c);
+        }
+    } else {
+        // B is greater than A
+        // Second level check: Is 'B' greater than 'C'?
+        if (num_b >= num_c) {
+            printf("%d is the maximum.\n", num_b);
+        } else {
+            // C is larger than B, and B > A, so C is max
+            printf("%d is the maximum.\n", num_c);
+        }
+    }
+
+    return 0;
+}
