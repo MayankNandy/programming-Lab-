@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int user_roll;
+    int target_roll = 100;
+
+    printf("Enter the Roll Number to check: ");
+    scanf("%d", &user_roll);
+
+    // Simple IF check
+    if (user_roll == target_roll) {
+        printf("Roll Number %d IS present.\n", target_roll);
+    }
+    
+    // Note: The prompt asks for IF loop ONLY, so no else block is used to report 'not present'
+
+    return 0;
+}
