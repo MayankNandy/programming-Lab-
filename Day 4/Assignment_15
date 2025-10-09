@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a, b, c;
+    double d, root1, root2; // d is discriminant
+
+    printf("Enter coefficients a, b, c:\n");
+    scanf("%lf %lf %lf", &a, &b, &c);
+
+    // Calculate Discriminant (D = b^2 - 4ac)
+    d = (b * b) - (4 * a * c);
+
+    if (d > 0) {
+        // Two real and different roots
+        root1 = (-b + sqrt(d)) / (2 * a);
+        root2 = (-b - sqrt(d)) / (2 * a);
+        printf("Roots are real and different.\n");
+        printf("Root 1 = %.2lf, Root 2 = %.2lf\n", root1, root2);
+    } else if (d == 0) {
+        // Two real and equal roots
+        root1 = -b / (2 * a);
+        printf("Roots are real and same.\n");
+        printf("Root 1 = Root 2 = %.2lf\n", root1);
+    } else {
+        // Complex roots (beginner should just print the complex form)
+        double real_part = -b / (2 * a);
+        double imag_part = sqrt(-d) / (2 * a);
+        printf("Roots are complex.\n");
+        printf("Root 1 = %.2lf + i%.2lf\n", real_part, imag_part);
+        printf("Root 2 = %.2lf - i%.2lf\n", real_part, imag_part);
+    }
+
+    return 0;
+}
