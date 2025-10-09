@@ -11,8 +11,6 @@ int main() {
     if (user_roll == target_roll) {
         printf("Roll Number %d IS present.\n", target_roll);
     }
-    
-    // Note: The prompt asks for IF loop ONLY, so no else block is used to report 'not present'
 
     return 0;
 }
