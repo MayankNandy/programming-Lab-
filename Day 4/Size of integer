@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    // The sizeof operator returns the size in bytes
+    printf("Size of integer (int): %zu bytes\n", sizeof(int));
+    printf("Size of float: %zu bytes\n", sizeof(float));
+    printf("Size of double: %zu bytes\n", sizeof(double));
+    printf("Size of character (char): %zu byte\n", sizeof(char));
+    return 0;
+}
