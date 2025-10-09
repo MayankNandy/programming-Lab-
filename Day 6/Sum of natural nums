@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    int i;
+    int sum = 0; // Initialize sum to zero
+
+    printf("Enter a positive integer (N): ");
+    scanf("%d", &n);
+
+    // Basic for loop to add each number from 1 up to N
+    for (i = 1; i <= n; i = i + 1) {
+        // Add the current number (i) to the sum
+        sum = sum + i;
+    }
+
+    printf("The sum of natural numbers up to %d is: %d\n", n, sum);
+    return 0;
+}
