@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3;
+
+    printf("Enter three integers (num1, num2, num3): ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    // --- Check for Equality ---
+    if (num1 == num2 && num2 == num3) {
+        printf("\nCheck 1: All three numbers are **equal**.\n");
+    } else {
+        printf("\nCheck 1: The numbers are **unequal**.\n");
+        
+        // --- Find Greatest of Unequal ---
+        int greatest = num1;
+        if (num2 > greatest) {
+            greatest = num2;
+        }
+        if (num3 > greatest) {
+            greatest = num3;
+        }
+        printf("Check 2: The **greatest** of the unequal numbers is: %d\n", greatest);
+    }
+
+    // --- Check for Signs ---
+    
+    // Check if all are positive (> 0)
+    if (num1 > 0 && num2 > 0 && num3 > 0) {
+        printf("Check 3: All numbers are **positive**.\n");
+    }
+    // Check if all are negative (< 0)
+    else if (num1 < 0 && num2 < 0 && num3 < 0) {
+        printf("Check 3: All numbers are **negative**.\n");
+    }
+    // Otherwise, they are mixed
+    else {
+        printf("Check 3: The numbers are **mixed** (positive, negative, and/or zero).\n");
+    }
+
+    return 0;
+}
