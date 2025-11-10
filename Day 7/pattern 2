@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+
+int i, j, rows = 5;
+
+printf("--- Inverted Right Triangle Star Pattern ---\n");
+
+for (i = rows; i >= 1; i--) { // Outer loop: start from max rows, decrement
+
+for (j = 1; j <= i; j++) { // Inner loop: print stars equal to
+
+the current row number
+
+printf("* ");
+}
+printf("\n");
+}
+return 0;
+}
