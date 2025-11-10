@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int age;
+
+    printf("Enter the person's age: ");
+    scanf("%d", &age);
+
+    /* The expression (age >= 18) evaluates to:
+    1 (true) if age is 18 or more
+    0 (false) if age is less than 18
+    We switch on this result (0 or 1).
+    */
+    switch (age >= 18) {
+        case 1:
+            printf("Congratulations! You are **eligible to vote**.\n");
+            break;
+        case 0:
+            printf("Sorry, you are **not eligible to vote** yet.\n");
+            printf("You will be eligible in %d year(s).\n", 18 - age);
+            break;
+        default:
+            printf("Invalid age entered.\n");
+    }
+
+    return 0;
+}
