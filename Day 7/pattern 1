@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int i, j, rows = 5;
+    printf("--- Right Triangle Star Pattern ---\n");
+    
+    for (i = 1; i <= rows; i++) { // Outer loop for rows
+        for (j = 1; j <= i; j++) { // Inner loop for columns (prints stars)
+            printf("* ");
+        }
+        printf("\n"); // Move to the next line
+    }
+    return 0;
+}
